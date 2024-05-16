@@ -9,6 +9,9 @@ const onGoogleLogin = () => {
     window.location.href = "http://localhost:8080/oauth2/authorization/google"
 }
 
+const onKakaoLogin = () => {
+    window.location.href = "http://localhost:8080/oauth2/authorization/kakao"
+}
 const getData = () => {
     fetch("http://localhost:8080/my", {
         method: "GET",
@@ -26,6 +29,7 @@ function App() {
       <>
           <button onClick={onNaverLogin}>NAVER LOGIN</button>
           <button onClick={onGoogleLogin}>GOOGLE LOGIN</button>
+          <button onClick={onKakaoLogin}>KAKAO LOGIN</button>
       </>
   );
 }
